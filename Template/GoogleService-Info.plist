@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>7481081646-ren9n4dj8vufojmk7lt54qn41ht77ugh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.7481081646-ren9n4dj8vufojmk7lt54qn41ht77ugh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDMXPI0gtFv_74e2_x16nDEwP69lppwTdU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>7481081646</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.video.to.live.mp3.audio.gif.Video-To</string>
+	<key>PROJECT_ID</key>
+	<string>video-convertor-4d2f0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>video-convertor-4d2f0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:7481081646:ios:01212f1679a8d6cd6104bf</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-9752109323987437~1787544299</string>
+</dict>
+</plist>

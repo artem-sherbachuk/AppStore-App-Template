@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ig-qI-UWA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pricing View Controller-->
+        <scene sceneID="GpA-UB-ZUF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="2ig-qI-UWA" customClass="PricingViewController" customModule="Charging_play" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d7k-dy-8JH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7J-P5-gle" customClass="VideoView" customModule="Charging_play" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isMuted" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-Le-AUX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cvn-1w-H5F">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDr-U6-aOI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-fc-kw9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="pyw-gz-pth">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="808.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z69-SE-138">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xV2-vw-7by" customClass="SpringImageView" customModule="Charging_play" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="1.5" width="382" height="77"/>
+                                                                <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="80" id="PQc-ky-n9i"/>
+                                                                </constraints>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                                                            </imageView>
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eM-P9-1MG" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="0.0"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lGX-9V-ZU6" userLabel="Pricing" customClass="PricingStackView" customModule="Charging_play" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="112" width="382" height="431"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-Ym-DYn" userLabel="Discount" customClass="DiscountStackView" customModule="Charging_play" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="81"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RHX-iE-YOG">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oE7-4c-34I">
+                                                                        <rect key="frame" x="0.0" y="8" width="382" height="29"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-50% Ends in: 00:00:09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2zQ-XE-8oE" userLabel="Timer" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="45" width="382" height="36"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                                        <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="discountLabel" destination="2zQ-XE-8oE" id="k2G-Yh-jMj"/>
+                                                                    <outlet property="hintLabel" destination="oE7-4c-34I" id="X7F-1T-eKF"/>
+                                                                </connections>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zwE-5J-CNZ" customClass="SubscriptionOptionView" customModule="Charging_play" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="97" width="382" height="128.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZwK-Um-hSp" customClass="SpringImageView" customModule="Charging_play" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="18.5"/>
+                                                                        <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="4NA-oB-9bL"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zs5-YQ-yS2">
+                                                                        <rect key="frame" x="0.0" y="24" width="382" height="104.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONTHLY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uMD-Ml-00g" userLabel="Title" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                                                <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6lC-CT-JFL" userLabel="Old Price" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="28" width="382" height="24"/>
+                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kC1-mV-5nL" userLabel="Cost" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="56" width="382" height="24"/>
+                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lhR-xO-GBp" userLabel="desc" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="84" width="382" height="20.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" red="0.74399948780000003" green="0.99705451730000005" blue="0.2755226442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outlet property="checkmarkImageView" destination="ZwK-Um-hSp" id="df2-2q-BRY"/>
+                                                                    <outlet property="costLabel" destination="kC1-mV-5nL" id="31w-D3-Fiw"/>
+                                                                    <outlet property="discountLabel" destination="lhR-xO-GBp" id="UlO-4f-xAe"/>
+                                                                    <outlet property="oldPriceLabel" destination="6lC-CT-JFL" id="bMK-YO-8cq"/>
+                                                                    <outlet property="titleLabel" destination="uMD-Ml-00g" id="OUg-X3-OPF"/>
+                                                                </connections>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aZ-Nf-LXQ">
+                                                                <rect key="frame" x="0.0" y="241.5" width="382" height="45"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="9Eh-jg-6pJ"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="More Options" image="chevron.down" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="moreOptionsActionWithSender:" destination="lGX-9V-ZU6" eventType="touchUpInside" id="ELC-4A-JEH"/>
+                                                                </connections>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-Vj-Ib9" userLabel="Pricing Table" customClass="SubscriptionsOptionsStackView" customModule="Charging_play" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="302.5" width="382" height="128.5"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="De5-LV-EMi" customClass="SubscriptionOptionView" customModule="Charging_play" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="128.5"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="shc-rB-1jY" customClass="SpringImageView" customModule="Charging_play" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="18.5"/>
+                                                                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="20" id="BLS-hs-ePd"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="j5Q-rG-54T">
+                                                                                <rect key="frame" x="0.0" y="24" width="116.5" height="104.5"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONTHLY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I0y-Qg-c1O" userLabel="Title" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hSN-Cp-eSa" userLabel="Old Price" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="28" width="116.5" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HmU-oc-89e" userLabel="Cost" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="56" width="116.5" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T31-yN-uoS" userLabel="desc" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="84" width="116.5" height="20.5"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <color key="textColor" red="0.74399948780000003" green="0.99705451730000005" blue="0.2755226442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                        <gestureRecognizers/>
+                                                                        <connections>
+                                                                            <outlet property="checkmarkImageView" destination="shc-rB-1jY" id="HS9-cG-e4C"/>
+                                                                            <outlet property="costLabel" destination="HmU-oc-89e" id="m0m-2q-pwk"/>
+                                                                            <outlet property="discountLabel" destination="T31-yN-uoS" id="XDl-pb-50g"/>
+                                                                            <outlet property="oldPriceLabel" destination="hSN-Cp-eSa" id="Q6Y-GJ-eqg"/>
+                                                                            <outlet property="titleLabel" destination="I0y-Qg-c1O" id="2co-Dd-1f3"/>
+                                                                        </connections>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="L0Y-0W-1G4" customClass="SubscriptionOptionView" customModule="Charging_play" customModuleProvider="target">
+                                                                        <rect key="frame" x="132.5" y="0.0" width="117" height="128.5"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="diy-Uj-zZS" customClass="SpringImageView" customModule="Charging_play" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="117" height="18.5"/>
+                                                                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="20" id="sn9-2l-NKY"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wk0-Fv-Tyh">
+                                                                                <rect key="frame" x="0.0" y="24" width="117" height="104.5"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIFETIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cc4-Ow-Dc5" userLabel="Title" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qfW-wc-6P9" userLabel="Old Price" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="28" width="117" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-4n-Svf" userLabel="Cost" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="56" width="117" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Alf-Eq-Fs8" userLabel="desc" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="84" width="117" height="20.5"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <color key="textColor" red="0.74399948780000003" green="0.99705451730000005" blue="0.2755226442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                        <connections>
+                                                                            <outlet property="checkmarkImageView" destination="diy-Uj-zZS" id="Rur-by-0nm"/>
+                                                                            <outlet property="costLabel" destination="4Ed-4n-Svf" id="o8C-uH-0qa"/>
+                                                                            <outlet property="discountLabel" destination="Alf-Eq-Fs8" id="Dh8-zT-BXn"/>
+                                                                            <outlet property="oldPriceLabel" destination="qfW-wc-6P9" id="iy0-ln-Aja"/>
+                                                                            <outlet property="titleLabel" destination="cc4-Ow-Dc5" id="dAj-RN-1ZM"/>
+                                                                        </connections>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-7Z-cyT" userLabel="Option3" customClass="SubscriptionOptionView" customModule="Charging_play" customModuleProvider="target">
+                                                                        <rect key="frame" x="265.5" y="0.0" width="116.5" height="128.5"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Cff-0q-vU8" customClass="SpringImageView" customModule="Charging_play" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="18.5"/>
+                                                                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="20" id="y60-if-mqf"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6by-mH-7w9">
+                                                                                <rect key="frame" x="0.0" y="24" width="116.5" height="104.5"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANNUAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="41m-Nz-c6i" userLabel="Title" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11,49$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-8e-LHc" userLabel="Old Price" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="28" width="116.5" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11,49$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-3M-Qrg" userLabel="Cost" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="56" width="116.5" height="24"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                                        <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-DD-Qub" userLabel="desc" customClass="SpringLabel" customModule="Charging_play" customModuleProvider="target">
+                                                                                        <rect key="frame" x="0.0" y="84" width="116.5" height="20.5"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <color key="textColor" red="0.74399948780000003" green="0.99705451730000005" blue="0.2755226442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                        <connections>
+                                                                            <outlet property="checkmarkImageView" destination="Cff-0q-vU8" id="VSp-IL-ilO"/>
+                                                                            <outlet property="costLabel" destination="wzU-3M-Qrg" id="00S-dp-rwr"/>
+                                                                            <outlet property="discountLabel" destination="gCX-DD-Qub" id="Plz-Z6-hWN"/>
+                                                                            <outlet property="oldPriceLabel" destination="Czd-8e-LHc" id="va7-XW-wgQ"/>
+                                                                            <outlet property="titleLabel" destination="41m-Nz-c6i" id="W8O-yb-qra"/>
+                                                                        </connections>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <connections>
+                                                                    <outlet property="option1" destination="De5-LV-EMi" id="erx-X8-pgm"/>
+                                                                    <outlet property="option2" destination="L0Y-0W-1G4" id="luM-te-TTy"/>
+                                                                    <outlet property="option3" destination="Ddb-7Z-cyT" id="Vzz-bh-OfW"/>
+                                                                </connections>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <connections>
+                                                            <outlet property="additionalPricingStackView" destination="NmD-Vj-Ib9" id="crH-cH-xdm"/>
+                                                            <outlet property="centerPricingView" destination="zwE-5J-CNZ" id="Nqm-yW-HQL"/>
+                                                            <outlet property="discountView" destination="bd7-Ym-DYn" id="7eV-a6-OID"/>
+                                                            <outlet property="moreOptionsButton" destination="5aZ-Nf-LXQ" id="Mth-N2-1Wq"/>
+                                                        </connections>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sn7-1z-V1E" userLabel="FAQ" customClass="FAQTableView" customModule="Charging_play" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="575" width="382" height="121.5"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="K2d-DN-YaQ">
+                                                        <rect key="frame" x="0.0" y="728.5" width="382" height="80"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKG-23-jrn" customClass="SpringButton" customModule="Charging_play" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="16" id="10X-E3-iV1"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <state key="normal" title="Restore Purchase">
+                                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="restorePurchaseActionWithSender:" destination="2ig-qI-UWA" eventType="touchUpInside" id="bum-uc-27C"/>
+                                                                </connections>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SSk-Ay-XPY" userLabel="Terms">
+                                                                <rect key="frame" x="0.0" y="20" width="382" height="16"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvK-te-QHL" customClass="SpringButton" customModule="Charging_play" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="16"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="16" id="J8H-dK-knj"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <state key="normal" title="Privacy Policy">
+                                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="privacyPolicityActionWithSender:" destination="2ig-qI-UWA" eventType="touchUpInside" id="Wm3-zH-3Q9"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-qB-egC" customClass="SpringButton" customModule="Charging_play" customModuleProvider="target">
+                                                                        <rect key="frame" x="191" y="0.0" width="191" height="16"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="16" id="eBz-5f-SZg"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <state key="normal" title="Terms of service">
+                                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="termOfUseActionWithSender:" destination="2ig-qI-UWA" eventType="touchUpInside" id="SLa-KF-jTS"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BHV-Ds-vRI">
+                                                                <rect key="frame" x="0.0" y="40" width="382" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="5dY-fS-ojW"/>
+                                                                </constraints>
+                                                                <string key="text">A [purchase amount and period] purchase will be applied to your iTunes account [at the end of the trial or intro] on confirmation]. Subscriptions will automatically renew unless canceled within 24-hours before the end of the current period. You can cancel anytime with your iTunes account settings. Any unused portion of a free trial will be forfeited if you purchase a subscription.</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pyw-gz-pth" secondAttribute="bottom" constant="88" id="VYP-5y-fbb"/>
+                                            <constraint firstItem="pyw-gz-pth" firstAttribute="leading" secondItem="rkc-fc-kw9" secondAttribute="leading" constant="16" id="kci-x3-S4b"/>
+                                            <constraint firstItem="pyw-gz-pth" firstAttribute="top" secondItem="rkc-fc-kw9" secondAttribute="top" id="pyb-RW-AnT"/>
+                                            <constraint firstAttribute="trailing" secondItem="pyw-gz-pth" secondAttribute="trailing" constant="16" id="rJg-hZ-Wzv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rkc-fc-kw9" firstAttribute="leading" secondItem="bkR-03-jGo" secondAttribute="leading" id="5ct-Lu-XHT"/>
+                                    <constraint firstItem="rkc-fc-kw9" firstAttribute="trailing" secondItem="bkR-03-jGo" secondAttribute="trailing" id="BjT-qD-HTF"/>
+                                    <constraint firstItem="rkc-fc-kw9" firstAttribute="top" secondItem="bkR-03-jGo" secondAttribute="top" id="Ck6-2R-Z88"/>
+                                    <constraint firstItem="rkc-fc-kw9" firstAttribute="bottom" secondItem="bkR-03-jGo" secondAttribute="bottom" id="N94-Rj-Uyo"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bkR-03-jGo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="cAG-aN-Jxt"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49K-au-p41" customClass="SubscriptionButtonView" customModule="Charging_play" customModuleProvider="target">
+                                <rect key="frame" x="16" y="786" width="382" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHK-c7-aUO" customClass="SpringButton" customModule="Charging_play" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="8"/>
+                                        <state key="normal" title="Start Trial" image="crown.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="applyGradient" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="subscribeButtonWithSender:" destination="2ig-qI-UWA" eventType="touchUpInside" id="4yF-gV-vKr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30-day money back guarantee!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7z-aC-DF9">
+                                        <rect key="frame" x="0.0" y="41" width="382" height="15"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="GVB-X1-78l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IHK-c7-aUO" secondAttribute="trailing" id="2gp-Yv-b0y"/>
+                                    <constraint firstItem="y7z-aC-DF9" firstAttribute="leading" secondItem="49K-au-p41" secondAttribute="leading" id="CRx-Uz-aKe"/>
+                                    <constraint firstAttribute="bottom" secondItem="IHK-c7-aUO" secondAttribute="bottom" id="GYn-r0-lH2"/>
+                                    <constraint firstAttribute="bottom" secondItem="y7z-aC-DF9" secondAttribute="bottom" constant="4" id="MGo-N4-rlU"/>
+                                    <constraint firstAttribute="height" constant="60" id="MbM-DV-agq"/>
+                                    <constraint firstAttribute="trailing" secondItem="y7z-aC-DF9" secondAttribute="trailing" id="c7h-iT-WYq"/>
+                                    <constraint firstItem="IHK-c7-aUO" firstAttribute="top" secondItem="49K-au-p41" secondAttribute="top" id="dZX-4I-6lu"/>
+                                    <constraint firstItem="IHK-c7-aUO" firstAttribute="leading" secondItem="49K-au-p41" secondAttribute="leading" id="sBR-Ka-lmw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="button" destination="IHK-c7-aUO" id="gIc-Z8-5iK"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F6a-I0-kAI"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a7J-P5-gle" firstAttribute="top" secondItem="d7k-dy-8JH" secondAttribute="top" id="4lN-PY-Fvi"/>
+                            <constraint firstItem="dpd-Le-AUX" firstAttribute="top" secondItem="d7k-dy-8JH" secondAttribute="top" id="5EV-mA-ea2"/>
+                            <constraint firstItem="F6a-I0-kAI" firstAttribute="trailing" secondItem="49K-au-p41" secondAttribute="trailing" constant="16" id="F2d-hw-y6m"/>
+                            <constraint firstAttribute="bottom" secondItem="dpd-Le-AUX" secondAttribute="bottom" id="L7s-BZ-Gwp"/>
+                            <constraint firstItem="dpd-Le-AUX" firstAttribute="leading" secondItem="d7k-dy-8JH" secondAttribute="leading" id="OPA-2g-K0U"/>
+                            <constraint firstAttribute="trailing" secondItem="ZDr-U6-aOI" secondAttribute="trailing" id="RdS-9n-qSN"/>
+                            <constraint firstAttribute="trailing" secondItem="a7J-P5-gle" secondAttribute="trailing" id="Rpr-av-mpd"/>
+                            <constraint firstAttribute="bottom" secondItem="a7J-P5-gle" secondAttribute="bottom" id="WK5-Re-1ZX"/>
+                            <constraint firstAttribute="trailing" secondItem="dpd-Le-AUX" secondAttribute="trailing" id="czk-Xi-dYN"/>
+                            <constraint firstItem="a7J-P5-gle" firstAttribute="leading" secondItem="d7k-dy-8JH" secondAttribute="leading" id="eVC-rX-05b"/>
+                            <constraint firstItem="49K-au-p41" firstAttribute="leading" secondItem="F6a-I0-kAI" secondAttribute="leading" constant="16" id="fkU-Mz-JI3"/>
+                            <constraint firstItem="F6a-I0-kAI" firstAttribute="bottom" secondItem="ZDr-U6-aOI" secondAttribute="bottom" id="kEz-e2-DpD"/>
+                            <constraint firstItem="F6a-I0-kAI" firstAttribute="bottom" secondItem="49K-au-p41" secondAttribute="bottom" constant="16" id="kHy-dn-jXK"/>
+                            <constraint firstItem="rkc-fc-kw9" firstAttribute="width" secondItem="d7k-dy-8JH" secondAttribute="width" id="p2x-rb-15H"/>
+                            <constraint firstItem="ZDr-U6-aOI" firstAttribute="top" secondItem="F6a-I0-kAI" secondAttribute="top" id="x0L-Vm-pR5"/>
+                            <constraint firstItem="ZDr-U6-aOI" firstAttribute="leading" secondItem="d7k-dy-8JH" secondAttribute="leading" id="zw9-Cz-GRT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButtonView" destination="49K-au-p41" id="E61-bz-aQ8"/>
+                        <outlet property="blurView" destination="dpd-Le-AUX" id="3k5-Qq-B68"/>
+                        <outlet property="pricingView" destination="lGX-9V-ZU6" id="h4F-ba-SYU"/>
+                        <outlet property="titleLabel" destination="8eM-P9-1MG" id="LiL-1h-QNP"/>
+                        <outlet property="videView" destination="a7J-P5-gle" id="6zt-sB-CYk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAZ-JD-MIo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.17391304347828" y="97.098214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="crown" catalog="system" width="128" height="92"/>
+        <image name="crown.fill" catalog="system" width="128" height="92"/>
+    </resources>
+</document>
